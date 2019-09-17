@@ -10,7 +10,11 @@ import Foundation
 
 class MessageThreadController {
     
-    static let baseURL = URL(string: "https://lambda-message-board.firebaseio.com/withframeworks")!
+//    static let baseURL = URL(string: "https://lambda-message-board.firebaseio.com/withframeworks")!
+    
+    
+    static let baseURL = URL(string: "https://lambda-message-board-a261f.firebaseio.com/")!
+
     var messageThreads: [MessageThread] = []
 
     var currentUser: Sender?

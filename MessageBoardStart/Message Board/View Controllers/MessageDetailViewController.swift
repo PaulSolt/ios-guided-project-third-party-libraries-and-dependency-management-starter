@@ -22,6 +22,8 @@ class MessageDetailViewController: MessagesViewController {
         messagesCollectionView.messagesDataSource = self
         messagesCollectionView.messagesLayoutDelegate = self
         messagesCollectionView.messagesDisplayDelegate = self
+        
+        messageInputBar.delegate = self
     }
 }
 
@@ -62,4 +64,30 @@ extension MessageDetailViewController: MessagesLayoutDelegate {
 
 extension MessageDetailViewController: MessagesDisplayDelegate {
     
+}
+
+extension MessageDetailViewController: InputBarAccessoryViewDelegate {
+    
+    
+    func inputBar(_ inputBar: InputBarAccessoryView, didPressSendButtonWith text: String) {
+        print("text: \(text)")
+        
+        guard let thread = messageThread else {
+            fatalError("No thread set!")
+        }
+        
+        guard let user = messageThreadController?.currentUser else {
+            fatalError("No user set")
+        }
+        
+        
+        messageThreadController?.createMessage(in: thread, withText: text, sender: user, completion: {
+            
+            // update the UI
+            DispatchQueue.main.async {
+                self.messagesCollectionView.reloadData()
+                self.messageInputBar.inputTextView.text = ""
+            }
+        })
+    }
 }
