@@ -64,6 +64,25 @@ extension MessageDetailViewController: MessagesLayoutDelegate {
 
 extension MessageDetailViewController: MessagesDisplayDelegate {
     
+    func messageStyle(for message: MessageType, at indexPath: IndexPath, in messagesCollectionView: MessageKit.MessagesCollectionView) -> MessageKit.MessageStyle {
+        
+        guard let message = messageThread?.messages[indexPath.item] else {
+            fatalError("Missing Messsage Thread")
+        }
+        
+        guard let user = messageThreadController?.currentUser else {
+            fatalError("No user set")
+        }
+
+        if message.senderId == user.senderId {
+            return .bubbleTail(.bottomRight, .curved)
+        } else {
+            return .bubbleTail(.bottomLeft, .curved)
+        }
+        
+        
+    }
+    
 }
 
 extension MessageDetailViewController: InputBarAccessoryViewDelegate {
