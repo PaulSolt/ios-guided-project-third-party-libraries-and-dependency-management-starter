@@ -17,8 +17,8 @@
 		46436030211ABC3700E7FF73 /* MessageThreadsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4643602F211ABC3700E7FF73 /* MessageThreadsTableViewController.swift */; };
 		46436033211ABC5800E7FF73 /* MessageThreadDetailTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46436032211ABC5800E7FF73 /* MessageThreadDetailTableViewController.swift */; };
 		46436035211ABC6B00E7FF73 /* MessageDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46436034211ABC6B00E7FF73 /* MessageDetailViewController.swift */; };
-		BD070A33233149DD00918103 /* Cartfile in Resources */ = {isa = PBXBuildFile; fileRef = BD070A32233149DD00918103 /* Cartfile */; };
-		BD070A3523314F4900918103 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = BD070A3423314F4900918103 /* README.md */; };
+		BD070A39233150EF00918103 /* MessageKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BD070A37233150EF00918103 /* MessageKit.framework */; };
+		BD070A3A233150EF00918103 /* InputBarAccessoryView.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BD070A38233150EF00918103 /* InputBarAccessoryView.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +36,8 @@
 		46436034211ABC6B00E7FF73 /* MessageDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageDetailViewController.swift; sourceTree = "<group>"; };
 		BD070A32233149DD00918103 /* Cartfile */ = {isa = PBXFileReference; lastKnownFileType = text; path = Cartfile; sourceTree = "<group>"; };
 		BD070A3423314F4900918103 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		BD070A37233150EF00918103 /* MessageKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageKit.framework; path = Carthage/Build/iOS/MessageKit.framework; sourceTree = "<group>"; };
+		BD070A38233150EF00918103 /* InputBarAccessoryView.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = InputBarAccessoryView.framework; path = Carthage/Build/iOS/InputBarAccessoryView.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,6 +45,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BD070A39233150EF00918103 /* MessageKit.framework in Frameworks */,
+				BD070A3A233150EF00918103 /* InputBarAccessoryView.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -56,6 +60,7 @@
 				BD070A3423314F4900918103 /* README.md */,
 				4612B5C6211AB41100E7FF73 /* Message Board */,
 				4612B5C5211AB41100E7FF73 /* Products */,
+				BD070A36233150EF00918103 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -125,6 +130,15 @@
 			path = "View Controllers";
 			sourceTree = "<group>";
 		};
+		BD070A36233150EF00918103 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				BD070A38233150EF00918103 /* InputBarAccessoryView.framework */,
+				BD070A37233150EF00918103 /* MessageKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -135,6 +149,7 @@
 				4612B5C0211AB41100E7FF73 /* Sources */,
 				4612B5C1211AB41100E7FF73 /* Frameworks */,
 				4612B5C2211AB41100E7FF73 /* Resources */,
+				BD070A3B2331523100918103 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -186,13 +201,35 @@
 			files = (
 				4612B5D2211AB41300E7FF73 /* LaunchScreen.storyboard in Resources */,
 				4612B5CF211AB41300E7FF73 /* Assets.xcassets in Resources */,
-				BD070A3523314F4900918103 /* README.md in Resources */,
-				BD070A33233149DD00918103 /* Cartfile in Resources */,
 				4612B5CD211AB41200E7FF73 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		BD070A3B2331523100918103 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/iOS/InputBarAccessoryView.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/MessageKit.framework",
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/InputBarAccessoryView.framework",
+				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/MessageKit.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage copy-frameworks\n/usr/local/bin/carthage outdated --xcode-warnings\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		4612B5C0211AB41100E7FF73 /* Sources */ = {
@@ -351,6 +388,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = VXUQXR6S56;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = "$(SRCROOT)/Message Board/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -369,6 +410,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = VXUQXR6S56;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = "$(SRCROOT)/Message Board/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
