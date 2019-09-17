@@ -76,10 +76,10 @@
             </objects>
             <point key="canvasLocation" x="708" y="231"/>
         </scene>
-        <!--View Controller-->
+        <!--Message Detail View Controller-->
         <scene sceneID="xla-Or-YHm">
             <objects>
-                <viewController id="noV-fO-XI1" sceneMemberID="viewController">
+                <viewController id="noV-fO-XI1" customClass="MessageDetailViewController" customModule="Message_Board" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="GOa-n7-SaW">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

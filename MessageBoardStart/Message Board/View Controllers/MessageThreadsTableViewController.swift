@@ -19,6 +19,8 @@ class MessageThreadsTableViewController: UITableViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
+        messageThreadController.currentUser = Sender(senderId: "PaulSolt", displayName: "Paul Solt")
+        
         messageThreadController.fetchMessageThreads {
             DispatchQueue.main.async {
                 self.tableView.reloadData()

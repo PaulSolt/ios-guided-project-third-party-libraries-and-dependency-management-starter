@@ -18,6 +18,7 @@
 		BD070A39233150EF00918103 /* MessageKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BD070A37233150EF00918103 /* MessageKit.framework */; };
 		BD070A3A233150EF00918103 /* InputBarAccessoryView.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BD070A38233150EF00918103 /* InputBarAccessoryView.framework */; };
 		BD070A4123316B9C00918103 /* MessageDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD070A4023316B9C00918103 /* MessageDetailViewController.swift */; };
+		BD070A4323316C6700918103 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD070A4223316C6700918103 /* Message.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +37,7 @@
 		BD070A37233150EF00918103 /* MessageKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageKit.framework; path = Carthage/Build/iOS/MessageKit.framework; sourceTree = "<group>"; };
 		BD070A38233150EF00918103 /* InputBarAccessoryView.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = InputBarAccessoryView.framework; path = Carthage/Build/iOS/InputBarAccessoryView.framework; sourceTree = "<group>"; };
 		BD070A4023316B9C00918103 /* MessageDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageDetailViewController.swift; sourceTree = "<group>"; };
+		BD070A4223316C6700918103 /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,6 +88,7 @@
 			isa = PBXGroup;
 			children = (
 				4612B5D9211AB66600E7FF73 /* MessageThread.swift */,
+				BD070A4223316C6700918103 /* Message.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -239,6 +242,7 @@
 				46436030211ABC3700E7FF73 /* MessageThreadsTableViewController.swift in Sources */,
 				4612B5C8211AB41100E7FF73 /* AppDelegate.swift in Sources */,
 				BD070A4123316B9C00918103 /* MessageDetailViewController.swift in Sources */,
+				BD070A4323316C6700918103 /* Message.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

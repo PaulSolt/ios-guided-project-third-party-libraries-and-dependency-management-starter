@@ -11,10 +11,10 @@ import Foundation
 class MessageThread: Codable, Equatable {
     
     let title: String
-    var messages: [MessageThread.Message]
+    var messages: [Message]
     let identifier: String
     
-    init(title: String, messages: [MessageThread.Message] = [], identifier: String = UUID().uuidString) {
+    init(title: String, messages: [Message] = [], identifier: String = UUID().uuidString) {
         self.title = title
         self.messages = messages
         self.identifier = identifier
@@ -33,21 +33,6 @@ class MessageThread: Codable, Equatable {
         
         self.title = title
         self.identifier = identifier
-    }
-    
-    
-    struct Message: Codable, Equatable {
-        
-        let text: String
-        let timestamp: Date
-        let displayName: String
-        
-        init(text: String, displayName: String, timestamp: Date = Date()) {
-            self.text = text
-            self.displayName = displayName
-            self.timestamp = timestamp
-            
-        }
     }
     
     static func ==(lhs: MessageThread, rhs: MessageThread) -> Bool {
