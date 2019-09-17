@@ -1,2 +1,11 @@
-# ios-guided-project-third-party-libraries-and-dependency-management-starter
-Starter project for third party dependencies 
+# MessageBoard App
+Starter project for third party dependencies
+
+
+## How to Install
+
+1. Install Carthage
+2. Run command
+
+        carthage bootstrap
+

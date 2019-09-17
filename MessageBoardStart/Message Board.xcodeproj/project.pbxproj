@@ -18,6 +18,7 @@
 		46436033211ABC5800E7FF73 /* MessageThreadDetailTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46436032211ABC5800E7FF73 /* MessageThreadDetailTableViewController.swift */; };
 		46436035211ABC6B00E7FF73 /* MessageDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46436034211ABC6B00E7FF73 /* MessageDetailViewController.swift */; };
 		BD070A33233149DD00918103 /* Cartfile in Resources */ = {isa = PBXBuildFile; fileRef = BD070A32233149DD00918103 /* Cartfile */; };
+		BD070A3523314F4900918103 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = BD070A3423314F4900918103 /* README.md */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +35,7 @@
 		46436032211ABC5800E7FF73 /* MessageThreadDetailTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageThreadDetailTableViewController.swift; sourceTree = "<group>"; };
 		46436034211ABC6B00E7FF73 /* MessageDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageDetailViewController.swift; sourceTree = "<group>"; };
 		BD070A32233149DD00918103 /* Cartfile */ = {isa = PBXFileReference; lastKnownFileType = text; path = Cartfile; sourceTree = "<group>"; };
+		BD070A3423314F4900918103 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +53,7 @@
 			isa = PBXGroup;
 			children = (
 				BD070A32233149DD00918103 /* Cartfile */,
+				BD070A3423314F4900918103 /* README.md */,
 				4612B5C6211AB41100E7FF73 /* Message Board */,
 				4612B5C5211AB41100E7FF73 /* Products */,
 			);
@@ -183,6 +186,7 @@
 			files = (
 				4612B5D2211AB41300E7FF73 /* LaunchScreen.storyboard in Resources */,
 				4612B5CF211AB41300E7FF73 /* Assets.xcassets in Resources */,
+				BD070A3523314F4900918103 /* README.md in Resources */,
 				BD070A33233149DD00918103 /* Cartfile in Resources */,
 				4612B5CD211AB41200E7FF73 /* Main.storyboard in Resources */,
 			);
